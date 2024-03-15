@@ -1,5 +1,5 @@
 {
-  "name": "clear-log",
+  "name": "y-clear-log",
   "version": "1.0.0",
   "description": "console.log() Prints can be configured with special symbols to make prints more visible",
   "keywords": ["log", "console.log", "console", "clear"], 
