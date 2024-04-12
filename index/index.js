@@ -8,14 +8,14 @@ class log {
     compiler.hooks.emit.tap("log", (compilation) => {
       Object.keys(compilation.assets).forEach((item) => {
         let source = compilation.assets[item].source();
-        console.log(source, "!!!!!");
-        if (typeof source === 'function') {
+        if (typeof source === "function") {
           source = source(); // 如果是函数，执行以获取字符串
         }
-        if (typeof source === 'string') { // 检查source是否是字符串
+        if (typeof source === "string") {
+          // 检查source是否是字符串
           source = source.replace(reg, function (match, p1) {
-            console.log(match, "!!!!!");
-            return match.slice(0, -1) + `,'${_that.icon}')`;
+            return match.slice(0, -1) + `,'${_that.icon}')`
+            // return match.slice(0, -1) + `,'${_that.icon}')`;
           });
           // 更新构建产物对象
           compilation.assets[item] = {
@@ -23,10 +23,11 @@ class log {
             size: () => source.length,
           };
         } else {
-          console.error('Error: Compilation asset source is not a string.');
+          console.error("Error: Compilation asset source is not a string.");
         }
       });
     });
   }
+
 }
 module.exports = log;
