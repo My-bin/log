@@ -1,12 +1,12 @@
 {
   "name": "y-clear-log",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "console.log() Prints can be configured with special symbols to make prints more visible",
   "keywords": ["log", "console.log", "console", "clear"], 
   "main": "./index/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "bin",
+  "author": "z-bin",
   "license": "ISC"
 }
